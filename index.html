@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大屏展示</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>智能井盖异动监测平台</h1>
+    </header>
+    <!-- 时间 -->
+    <div id="time"></div>
+    <!-- 主体 -->
+    <div class="mainbox">
+        <!-- 第一列 -->
+        <div class="column">
+            <div class="panel1">
+                <h2 class="h2-title">机场分区统计</h2>
+                <div class="panel-bd">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>机场分区</th>
+                                <th>
+                                    <img src="images/u222.svg">
+                                    井盖总数
+                                </th>
+                                <th>
+                                    <img src="images/u225.svg">
+                                    井盖正常</th>
+                                <th>
+                                    <img src="images/u228.svg">
+                                    井盖告警</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>总区</td>
+                                <td>3201</td>
+                                <td>2735</td>
+                                <td>466</td>
+                            </tr>
+                            <tr>
+                                <td>A区</td>
+                                <td>1501</td>
+                                <td>1375</td>
+                                <td>226</td>
+                            </tr>
+                            <tr>
+                                <td>B区</td>
+                                <td>1700</td>
+                                <td>1360</td>
+                                <td>240</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel2">
+                <h2 class="h2-title">机场总区井盖各类型告警贡献度</h2>
+                <div class="panel-bd radar"></div>
+            </div>
+            <div class="panel3">
+                <h2 class="h2-title">机场 A 区井盖告警类型统计</h2>
+                <div class="panel-bd">
+                    <table>
+                        <tr>
+                            <td>打开告警</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>松动告警</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>水满告警</td>
+                            <td>21</td>
+                        </tr>
+                    </table>
+                    <div class="pie1"></div>
+                </div>
+            </div>
+            <div class="panel4">
+                <h2 class="h2-title">机场 B 区井盖告警类型统计</h2>
+                <div class="panel-bd">
+                    <table>
+                        <tr>
+                            <td>打开告警</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>松动告警</td>
+                            <td>53</td>
+                        </tr>
+                        <tr>
+                            <td>水满告警</td>
+                            <td>19</td>
+                        </tr>
+                    </table>
+                    <div class="pie2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 第二列 -->
+        <div class="column">
+            <div class="panel1">
+                <h2 class="h2-title">机场井盖告警当日情况</h2>
+                <div class="panel-bd line1"></div>
+            </div>
+            <div class="panel2">
+                <h2 class="h2-title">机场井盖告警当月情况</h2>
+                <div class="panel-bd line2"></div>
+            </div>
+            <div class="panel-group">
+                <div class="panel1">
+                    <h2 class="h2-title">告警较昨日情况</h2>
+                    <div class="panel-bd">
+                        <div class="bar1"></div>
+                        <div class="compare">
+                            <ul>
+                                <li>9</li>
+                                <li>机场总区</li>
+                                <li>21</li>
+                                <li>机场A区</li>
+                                <li>32</li>
+                                <li>机场B区</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel2">
+                    <h2 class="h2-title">告警较上一周情况
+                    </h2>
+                    <div class="panel-bd">
+                        <div class="bar2"></div>
+                        <div class="compare">
+                            <ul>
+                                <li>39</li>
+                                <li>机场总区</li>
+                                <li>19</li>
+                                <li>机场A区</li>
+                                <li>26</li>
+                                <li>机场B区</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第三列 -->
+        <div class="column">
+            <!-- 井盖告警详情 -->
+            <div class="panel1">
+                <h2 class="h2-title">机场井盖告警详情</h2>
+                <div class="panel-bd" id="warning-detail">
+                    <!-- <ul>
+                        <li>
+                            <div>
+                                <span>设备编号：</span> 
+                                <span>SZJC_A_00001</span>
+                            </div>
+                            <div>
+                                <span>设备地址：</span> 
+                                <span>深圳机场A区XXX</span>
+                            </div>
+                            <div>
+                                <span>报警时间：</span> 
+                                <span class="warning-color">2020-11-09 17:48:29</span>
+                            </div>
+                            <div>
+                                <span>报警信息：</span> 
+                                <span class="warning-color">低电压告警、松动告警、信号弱告警</span>
+                            </div>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+            <!-- 机场情况统计 -->
+            <div class="panel-group">
+                <div class="panel-left">
+                    <h2 class="h2-title">机场总区总体情况统计</h2>
+                    <div class="panel-bd">
+                        <table class="table-hd">
+                            <tbody>
+                                <tr>
+                                    <th>10.7%</th>
+                                    <th>289个</th>
+                                    <th>3.7V</th>
+                                </tr>
+                                <tr>
+                                    <td>告警发生率</td>
+                                    <td>日告警处理量</td>
+                                    <td>平均电压</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="all-area pie3">
+
+                        </div>
+                        <table class="all-area-warning">
+                            <tr class="hd-color">
+                                <td>低电压告警</td>
+                                <td>10.3%</td>
+                            </tr>
+                            <tr class="ft-color">
+                                <td>首要告警类型</td>
+                                <td>告警类型占比</td>
+                            </tr>
+                            <tr class="hd-color">
+                                <td>机场B区</td>
+                                <td>10.3%</td>
+                            </tr>
+                            <tr class="ft-color">
+                                <td>日告警最多区域</td>
+                                <td>告警贡献率</td>
+                            </tr>
+                            <tr class="hd-color">
+                                <td>机场A区</td>
+                                <td>10.9%</td>
+                            </tr>
+                            <tr class="ft-color">
+                                <td>周告警最多区域</td>
+                                <td>告警贡献率</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-right">
+                    <div class="panel1">
+                        <h2 class="h2-title">机场A区总体情况统计</h2>
+                        <div class="panel-bd">
+                            <table class="table-hd">
+                                <tbody>
+                                    <tr>
+                                        <th>10.7%</th>
+                                        <th>289个</th>
+                                        <th>3.7V</th>
+                                    </tr>
+                                    <tr>
+                                        <td>告警发生率</td>
+                                        <td>日告警处理量</td>
+                                        <td>平均电压</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="A-area pie4">
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel2">
+                        <h2 class="h2-title">机场B区总体情况统计</h2>
+                        <div class="panel-bd">
+                            <table class="table-hd">
+                                <tbody>
+                                    <tr>
+                                        <th>11.1%</th>
+                                        <th>132个</th>
+                                        <th>3.8V</th>
+                                    </tr>
+                                    <tr>
+                                        <td>告警发生率</td>
+                                        <td>日告警处理量</td>
+                                        <td>平均电压</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="B-area pie5">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+body {
+    background: url(../images/bg.png) no-repeat top center;
+    line-height: 1.15;
+    padding: .125rem .125rem 0.125rem;
+    background-size: 100% 100%;
+    &::-webkit-scrollbar {
+        display: none !important;
+        width: 0;
+        height: 0;
+    }
+
+}
+
+header {
+    height: .75rem;
+    // background-color: pink;
+    background: url(../images/u171.svg) no-repeat top center;
+    background-size: 100% 100%;
+    position: relative;
+
+    h1 {
+        width: 4.6125rem;
+        height: .5125rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: .3rem;
+        color: #fff;
+        text-align: center;
+        line-height: .5125rem;
+        font-weight: 400;
+        background: url(../images/u172.svg) no-repeat top center;
+        background-size: 100% 100%;
+    }
+}
+
+#time {
+    color: #fff;
+    font-size: .25rem;
+    height: .25rem;
+    margin-bottom: .3125rem;
+    margin-left: .1875rem;
+}
+
+.mainbox {
+    display: flex;
+    justify-content: space-around;
+    height: 12.0375rem;
+
+    //列
+    .column {
+
+        // 第一列
+        &:first-child {
+            width: 6.25rem;
+            height: 12.0375rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            //分区统计
+            .panel1 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 2.5875rem;
+
+                    table {
+                        width: 100%;
+                        height: 100%;
+                        font-size: .225rem;
+                        padding: .1875rem;
+                        color: #fff;
+
+                        thead {
+                            th {
+                                font-weight: 400;
+
+                                img {
+                                    vertical-align: middle;
+                                    width: .3375rem;
+                                }
+
+                                &:nth-child(2) {
+                                    color: rgb(129, 211, 248);
+                                }
+
+                                &:nth-child(3) {
+                                    color: rgb(202, 249, 130);
+                                }
+
+                                &:last-child {
+                                    color: rgb(236, 128, 141);
+                                }
+                            }
+
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    // font-weight: 700;
+                                    font-size: .3rem;
+                                    text-align: center;
+
+                                    &:nth-child(2) {
+                                        color: rgb(129, 211, 248);
+                                    }
+
+                                    &:nth-child(3) {
+                                        color: rgb(202, 249, 130);
+                                    }
+
+                                    &:last-child {
+                                        color: rgb(236, 128, 141);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //雷达图
+            .panel2 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 3.525rem;
+                    // background-color: pink;
+                }
+            }
+
+            //A区警告
+            .panel3 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 1.65rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    //表格样式
+                    table {
+                        width: 2.375rem;
+                        height: 100%;
+                        text-align: center;
+                        font-size: .225rem;
+
+                        tr {
+                            td:first-child {
+                                color: rgb(250, 205, 145);
+                            }
+
+                            td:nth-child(2) {
+                                color: rgb(202, 249, 130);
+                            }
+                        }
+                    }
+
+                    div.pie1 {
+                        width: 3.875rem;
+                        height: 100%;
+                    }
+                }
+            }
+
+            //B区警告
+            .panel4 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 1.65rem;
+                    display: flex;
+                    justify-content: space-between;
+
+                    //表格样式
+                    table {
+                        width: 2.375rem;
+                        height: 100%;
+                        text-align: center;
+                        font-size: .225rem;
+
+                        tr {
+                            td:first-child {
+                                color: rgb(250, 205, 145);
+                            }
+
+                            td:nth-child(2) {
+                                color: rgb(129, 211, 248);
+                            }
+                        }
+                    }
+
+                    div.pie2 {
+                        width: 3.875rem;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        //第二列
+        &:nth-child(2) {
+            width: 10.625rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            //当日告警
+            .panel1 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 4rem;
+                    // background-color: pink;
+                }
+            }
+
+            //当月告警
+            .panel2 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 4rem;
+                    // background-color: pink;
+                }
+            }
+
+            .panel-group {
+                display: flex;
+
+                // 告警较昨日
+                .panel1 {
+                    flex: 1;
+                    margin-right: .125rem;
+                    border: 1px solid rgba(25, 151, 192, 1);
+                    border-radius: 4px;
+
+                    .panel-bd {
+                        height: 2.075rem;
+                        display: flex;
+                        padding: .05rem;
+
+                        div.bar1 {
+                            flex: 4;
+                            height: 100%;
+                        }
+
+                        div.compare {
+                            flex: 1;
+                            height: 100%;
+                            border: 1px solid rgba(25, 151, 192, 1);
+                            border-radius: 4px;
+                            color: rgb(129, 211, 248);
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            font-size: .225rem;
+
+                            ul {
+                                li {
+                                    margin-bottom: .0625rem;
+
+                                    &:nth-child(odd) {
+                                        color: #52ffff;
+                                        margin-bottom: .1rem;
+
+                                    }
+
+                                    &:nth-child(even) {
+                                        color: #81D3F8;
+                                        font-size: .175rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 告警较昨日
+                .panel2 {
+                    flex: 1;
+                    border: 1px solid rgba(25, 151, 192, 1);
+                    border-radius: 4px;
+
+                    .panel-bd {
+                        height: 2.075rem;
+                        padding: .05rem;
+                        display: flex;
+
+                        div.bar2 {
+                            flex: 4;
+                            height: 100%;
+                        }
+
+                        div.compare {
+                            flex: 1;
+                            height: 100%;
+                            border: 1px solid rgba(25, 151, 192, 1);
+                            border-radius: 4px;
+                            color: rgb(129, 211, 248);
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            font-size: .225rem;
+
+                            ul {
+                                li {
+                                    margin-bottom: .0625rem;
+
+                                    &:nth-child(odd) {
+                                        color: #52ffff;
+                                        margin-bottom: .1rem;
+
+                                    }
+
+                                    &:nth-child(even) {
+                                        color: #81D3F8;
+                                        font-size: .175rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //第三列
+        &:last-child {
+            width: 6.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            //告警详情
+            .panel1 {
+                border: 1px solid rgba(25, 151, 192, 1);
+                border-radius: 4px;
+
+                .panel-bd {
+                    height: 6.75rem;
+                    padding: 0 .075rem;
+                    overflow: hidden;
+                    // background-color: pink;
+                    ul {
+                        // width: 100%;
+                        li {
+                            padding-left: .125rem;
+                            line-height: .375rem;
+                            border: 1px solid rgba(25, 151, 192, 1);
+                            border-radius: 4px;
+                            color: #81D3F8;
+                            margin-bottom: .125rem;
+                            font-size: .2rem;
+                            .warning-color{
+                                color: #EC808D;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .panel-group {
+                display: flex;
+
+                .panel-left {
+                    flex: 1;
+                    margin-right: .125rem;
+                    border: 1px solid rgba(25, 151, 192, 1);
+                    border-radius: 4px;
+
+                    // 总体情况统计
+                    .panel-bd {
+                        height: 3.9875rem;
+
+                        table.table-hd {
+                            margin-top: 3px;
+                            width: 100%;
+                            height: .6875rem;
+                            font-size: .225rem;
+                            text-align: center;
+
+                            th {
+                                color: #52ffff;
+                                font-weight: 400;
+                            }
+
+                            td {
+                                color: #81D3F8;
+                                font-size: .175rem;
+
+                            }
+
+                            tr:nth-child(2) {
+                                margin-top: 20px;
+                            }
+                        }
+
+                        .all-area {
+                            height: 1.1rem;
+                            // background-color: #ff0;
+                        }
+
+                        table.all-area-warning {
+                            width: 2.875rem;
+                            height: 2.075rem;
+                            margin: 0 auto;
+                            font-size: .15rem;
+                            text-align: center;
+                            border: 1px solid rgba(25, 151, 192, 1);
+                            border-radius: 4px;
+                        }
+                    }
+                }
+
+                .panel-right {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    //A区告警统计
+                    .panel1 {
+                        border: 1px solid rgba(25, 151, 192, 1);
+                        border-radius: 4px;
+
+                        .panel-bd {
+                            height: 1.7rem;
+
+                            table.table-hd {
+                                margin-top: 3px;
+                                width: 100%;
+                                height: .6875rem;
+                                font-size: .225rem;
+                                text-align: center;
+
+                                th {
+                                    color: #52ffff;
+                                    font-weight: 400;
+                                }
+
+                                td {
+                                    color: #81D3F8;
+                                    font-size: .175rem;
+
+                                }
+
+                                tr:nth-child(2) {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .A-area.pie4 {
+                                height: 1.1rem;
+                                // background-color: #ff0;
+                            }
+                        }
+                    }
+
+                    //B区告警统计
+                    .panel2 {
+                        border: 1px solid rgba(25, 151, 192, 1);
+                        border-radius: 4px;
+
+                        .panel-bd {
+                            height: 1.7rem;
+
+                            table.table-hd {
+                                margin-top: 3px;
+                                width: 100%;
+                                height: .6875rem;
+                                font-size: .225rem;
+                                text-align: center;
+
+                                th {
+                                    color: #52ffff;
+                                    font-weight: 400;
+                                }
+
+                                td {
+                                    color: #81D3F8;
+                                    font-size: .175rem;
+                                }
+
+                                tr:nth-child(2) {
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            .B-area.pie5 {
+                                height: 1.1rem;
+                                // background-color: #ff0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 方框标题
+    .h2-title {
+        color: #fff;
+        font-size: .25rem;
+        height: .4375rem;
+        padding-left: .1rem;
+        font-weight: 400;
+        padding-top: .1rem;
+        background: linear-gradient(to right, rgba(53, 118, 152, .5) 0%, rgba(13, 38, 66, .8) 100%);
+    }
+
+    .hd-color {
+        color: #52ffff;
+        font-size: .2rem;
+    }
+
+    .ft-color {
+        color: #81D3F8;
+        font-size: .175rem;
+    }
+
+    .scroll{
+        animation: scroll 8s linear infinite;
+    }
+    
+    // @keyframes scroll {
+    //     from{
+    //         transform: translateY(-168px);
+    //     }
+    //     to{
+    //         transform: translateY(0);
+    //     }
+    // }
+    
+}
+@media screen and (max-width:1024px){
+    html{
+        font-size: 42px!important;
+    }
+}
+@media screen and (min-width:1920px){
+    html{
+        font-size: 80px!important;
+    }
+}
